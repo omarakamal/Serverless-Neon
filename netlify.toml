@@ -1,7 +1,6 @@
 [build]
+  publish = "."
   functions = "netlify/functions"
-  publish = "build"
-
 [dev]
   functions = "netlify/functions"
   port = 8888
