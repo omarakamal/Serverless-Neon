@@ -1,9 +1,12 @@
 [build]
   publish = "."
   functions = "netlify/functions"
+
 [dev]
   functions = "netlify/functions"
   port = 8888
+  autoLaunch = false
+
 
 [functions]
   node_bundler = "esbuild"
@@ -18,3 +21,21 @@
   from = "/api/omar"
   to   = "/.netlify/functions/omar"
   status = 200
+
+[[redirects]]
+  from = "/api/products/:id"
+  to   = "/.netlify/functions/product-by-id"
+  status = 200
+
+
+[[redirects]]
+  from = "/api/auth/seed"
+  to   = "/.netlify/functions/seed"
+  status = 200
+
+
+[[redirects]]
+  from = "/api/auth/login"
+  to   = "/.netlify/functions/login"
+  status = 200
+

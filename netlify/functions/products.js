@@ -1,6 +1,5 @@
 import { db } from "../lib/db.js";
 import { products } from "../db/schema/product.js";
-import { z } from "zod";
 import { ilike, desc  } from "drizzle-orm";
 // import { requireAdmin } from '../lib/auth.js';
 import { json, CreateProduct, intOr } from "../lib/helpers.js";
