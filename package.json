@@ -2,8 +2,17 @@
   "name": "neon-db-metrash",
   "version": "1.0.0",
   "main": "index.js",
+  "private": true,
+
+  "type": "module",
+
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "netlify dev",
+    "build": "netlify build",
+    "deploy": "netlify deploy",
+    "deploy:prod": "netlify deploy --prod",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio"
   },
   "keywords": [],
   "author": "",
@@ -20,5 +29,9 @@
   "devDependencies": {
     "drizzle-kit": "^0.31.8",
     "netlify-cli": "^23.12.3"
+  },
+  "engines": {
+    "node": ">=18"
   }
+
 }
